@@ -198,8 +198,7 @@ WHERE
 dc.descricao ILIKE '%EVENTOS/ SINISTROS CONHECIDOS OU AVISADOS  DE ASSISTÊNCIA A SAÚDE MEDICO HOSPITALAR %'
 and dc.DATA >= (select max(data) from demonstracoes_contabeis) - INTERVAL '3 months'
 ORDER by dc.vl_saldo_final desc
-limit 10
-;
+limit 10;
 ```
 2. As 10 operadoras com maiores despesas nessa categoria no último ano.
 ```cmd
@@ -210,8 +209,7 @@ ON TRIM(dc.REG_ANS) = TRIM(oa.REG_ANS)
 where descricao ilike '%EVENTOS/ SINISTROS CONHECIDOS OU AVISADOS  DE ASSISTÊNCIA A SAÚDE MEDICO HOSPITALAR %'
 and extract(year from data) = 2024
 order by dc.vl_saldo_final desc
-limit 10
-;
+limit 10;
 ```
 ## Prints de funcionamento
 
