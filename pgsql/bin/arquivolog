@@ -1,0 +1,503 @@
+2025-03-30 16:19:48.628 -03 [7516] FATAL:  arquivo de bloqueio "postmaster.pid" já existe
+2025-03-30 16:19:48.628 -03 [7516] DICA:  Outro postmaster (PID 21176) está executando sob o diretório de dados "C:/Desenv/PostgreSQL Windows/pgsql/data"?
+2025-03-30 18:03:40.573 -03 [14428] LOG:  iniciando PostgreSQL 17.4 on x86_64-windows, compiled by msvc-19.42.34436, 64-bit
+2025-03-30 18:03:40.577 -03 [14428] LOG:  escutando no endereço IPv6 "::1", porta 5432
+2025-03-30 18:03:40.577 -03 [14428] LOG:  escutando no endereço IPv4 "127.0.0.1", porta 5432
+2025-03-30 18:03:40.617 -03 [9780] LOG:  sistema de banco de dados foi desligado em 2025-03-30 18:03:23 -03
+2025-03-30 18:03:40.630 -03 [14428] LOG:  sistema de banco de dados está pronto para aceitar conexões
+2025-03-30 18:06:18.613 -03 [3636] ERRO:  erro de sintaxe em ou próximo a ";" no caractere 31
+2025-03-30 18:06:18.613 -03 [3636] COMANDO:  create table operadoras_ativas;
+2025-03-30 18:06:39.524 -03 [3636] ERRO:  erro de sintaxe em ou próximo a ";" no caractere 32
+2025-03-30 18:06:39.524 -03 [3636] COMANDO:  create table operadoras_ativas
+	;
+2025-03-30 18:08:40.624 -03 [12064] LOG:  checkpoint starting: time
+2025-03-30 18:08:45.527 -03 [12064] LOG:  checkpoint complete: wrote 48 buffers (0.3%); 0 WAL file(s) added, 0 removed, 0 recycled; write=4.880 s, sync=0.016 s, total=4.906 s; sync files=11, longest=0.003 s, average=0.002 s; distance=287 kB, estimate=287 kB; lsn=0/15B0550, redo lsn=0/15B04C0
+2025-03-30 18:11:04.260 -03 [3636] ERRO:  erro de sintaxe em ou próximo a ";" no caractere 33
+2025-03-30 18:11:04.260 -03 [3636] COMANDO:  create table operadoras_ativas(
+	;
+	;
+	
+	/dt
+	)
+	;
+2025-03-30 18:18:40.541 -03 [12064] LOG:  checkpoint starting: time
+2025-03-30 18:18:43.197 -03 [12064] LOG:  checkpoint complete: wrote 25 buffers (0.2%); 0 WAL file(s) added, 0 removed, 0 recycled; write=2.612 s, sync=0.033 s, total=2.657 s; sync files=20, longest=0.003 s, average=0.002 s; distance=96 kB, estimate=268 kB; lsn=0/15C8518, redo lsn=0/15C84C0
+2025-03-30 18:23:31.893 -03 [3636] ERRO:  erro de sintaxe em ou próximo a "(" no caractere 65
+2025-03-30 18:23:31.893 -03 [3636] COMANDO:  create table operadoras_ativas(
+	Resgistro_ANS VARCHAR(20),
+	CNPJ (20),
+	Razao_Social TEXT,
+	Nome_Fantasia TEXT,
+	Modalidade TEXT,
+	Logradouro TEXT,
+	Numero VARCHAR(10),
+	Complemento TEXT,
+	Bairro TEXT,
+	Cidade TEXT,
+	UF CHAR(2),
+	CEP VARCHAR(10),
+	DDD VARCHAR(5),
+	Telefone VARCHAR(20),
+	Fax VARCHAR(20),
+	Endereco_eletronico TEXT,
+	Represante TEXT,
+	Cargo_Representante TEXT,
+	Regiao_de_Comercializacao TEXT,
+	Data_Registro_ANS DATE
+	)
+	;
+2025-03-30 18:28:40.226 -03 [12064] LOG:  checkpoint starting: time
+2025-03-30 18:28:43.084 -03 [12064] LOG:  checkpoint complete: wrote 27 buffers (0.2%); 0 WAL file(s) added, 0 removed, 0 recycled; write=2.824 s, sync=0.025 s, total=2.859 s; sync files=23, longest=0.003 s, average=0.002 s; distance=119 kB, estimate=253 kB; lsn=0/15E62B0, redo lsn=0/15E6258
+2025-03-30 18:29:48.300 -03 [3636] ERRO:  erro de sintaxe em ou próximo a "dT" no caractere 1
+2025-03-30 18:29:48.300 -03 [3636] COMANDO:  dT
+	select * from operadoras_ativas
+	;
+2025-03-30 18:47:34.592 -03 [3636] ERRO:  valor é muito longo para tipo character varying(10)
+2025-03-30 18:47:34.592 -03 [3636] CONTEXTO:  COPY operadoras_ativas, linha 304, coluna numero: "Sala 217 e 218"
+2025-03-30 18:47:34.592 -03 [3636] COMANDO:  COPY  operadoras_ativas FROM STDIN WITH (FORMAT csv,HEADER true,DELIMITER ';',ENCODING 'UTF8')
+2025-03-30 18:48:40.118 -03 [12064] LOG:  checkpoint starting: time
+2025-03-30 18:48:40.797 -03 [12064] LOG:  checkpoint complete: wrote 7 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.661 s, sync=0.009 s, total=0.680 s; sync files=7, longest=0.003 s, average=0.002 s; distance=70 kB, estimate=235 kB; lsn=0/15F7E80, redo lsn=0/15F7E28
+2025-03-30 18:48:52.445 -03 [3636] ERRO:  erro de sintaxe em ou próximo a "column" no caractere 7
+2025-03-30 18:48:52.445 -03 [3636] COMANDO:  alter column numero TEXT
+	;
+2025-03-30 18:51:10.980 -03 [3636] ERRO:  erro de sintaxe em ou próximo a "column" no caractere 7
+2025-03-30 18:51:10.980 -03 [3636] COMANDO:  alter column numero type TEXT
+	;
+2025-03-30 18:53:40.799 -03 [12064] LOG:  checkpoint starting: time
+2025-03-30 18:53:45.928 -03 [12064] LOG:  checkpoint complete: wrote 48 buffers (0.3%); 0 WAL file(s) added, 0 removed, 0 recycled; write=5.111 s, sync=0.009 s, total=5.130 s; sync files=5, longest=0.004 s, average=0.002 s; distance=323 kB, estimate=323 kB; lsn=0/1648E28, redo lsn=0/1648D98
+2025-03-30 18:58:40.933 -03 [12064] LOG:  checkpoint starting: time
+2025-03-30 18:58:47.575 -03 [12064] LOG:  checkpoint complete: wrote 62 buffers (0.4%); 0 WAL file(s) added, 0 removed, 0 recycled; write=6.614 s, sync=0.019 s, total=6.643 s; sync files=12, longest=0.003 s, average=0.002 s; distance=59 kB, estimate=297 kB; lsn=0/1657CB8, redo lsn=0/1657C60
+2025-03-30 19:43:40.662 -03 [12064] LOG:  checkpoint starting: time
+2025-03-30 19:43:43.305 -03 [12064] LOG:  checkpoint complete: wrote 25 buffers (0.2%); 0 WAL file(s) added, 0 removed, 0 recycled; write=2.598 s, sync=0.029 s, total=2.645 s; sync files=21, longest=0.003 s, average=0.002 s; distance=107 kB, estimate=278 kB; lsn=0/1672C50, redo lsn=0/1672BF8
+2025-03-30 19:50:03.280 -03 [3636] ERRO:  sintaxe de entrada é inválida para tipo numeric: "168042,38"
+2025-03-30 19:50:03.280 -03 [3636] CONTEXTO:  COPY demonstracoes_contabeis, linha 40, coluna vl_saldo_inicial: "168042,38"
+2025-03-30 19:50:03.280 -03 [3636] COMANDO:  COPY  demonstracoes_contabeis FROM STDIN WITH (FORMAT csv,HEADER true,DELIMITER ';',ENCODING 'UTF8')
+2025-03-30 19:56:02.039 -03 [3636] ERRO:  erro de sintaxe em ou próximo a "CSV" no caractere 84
+2025-03-30 19:56:02.039 -03 [3636] COMANDO:  COPY  demonstracoes_contabeis FROM STDIN WITH (FORMAT csv,HEADER true,DELIMITER ';'CSV HEADER NULL '',ENCODING 'UTF8')
+2025-03-30 19:56:12.398 -03 [3636] ERRO:  erro de sintaxe em ou próximo a "NULL" no caractere 96
+2025-03-30 19:56:12.398 -03 [3636] COMANDO:  COPY  demonstracoes_contabeis FROM STDIN WITH (FORMAT csv,HEADER true,DELIMITER ';',CSV HEADER NULL '',ENCODING 'UTF8')
+2025-03-30 19:56:21.087 -03 [3636] ERRO:  opção "csv" desconhecida no caractere 85
+2025-03-30 19:56:21.087 -03 [3636] COMANDO:  COPY  demonstracoes_contabeis FROM STDIN WITH (FORMAT csv,HEADER true,DELIMITER ';',CSV HEADER, NULL '',ENCODING 'UTF8')
+2025-03-30 19:57:47.048 -03 [3636] ERRO:  erro de sintaxe em ou próximo a "" no caractere 170
+2025-03-30 19:57:47.048 -03 [3636] COMANDO:  COPY demonstracoes_contabeis (reg_ans, cd_conta_contabil, descricao, vl_saldo_inicial, vl_saldo_final) 
+	FROM '/caminho/arquivo.csv' 
+	DELIMITER ',' 
+	CSV HEADER 
+	NULL '' 
+	
+	
+	;
+2025-03-30 19:59:01.386 -03 [3636] ERRO:  valor é muito longo para tipo character varying(20)
+2025-03-30 19:59:01.386 -03 [3636] CONTEXTO:  COPY demonstracoes_contabeis, linha 2, coluna reg_ans: "2023-01-01;360783;12391;OUTROS CRÉDITOS DE OPERAÇÕES DE ASSISTÊNCIA MÉDICO-HOSPITALAR;0;0"
+2025-03-30 19:59:01.386 -03 [3636] COMANDO:  COPY demonstracoes_contabeis (reg_ans, cd_conta_contabil, descricao, vl_saldo_inicial, vl_saldo_final) 
+	FROM '../../2023/1T2023.csv' 
+	DELIMITER ',' 
+	CSV HEADER 
+	NULL '' 
+	ENCODING 'UTF8';
+2025-03-30 20:00:01.039 -03 [3636] ERRO:  dado extra após última coluna esperada
+2025-03-30 20:00:01.039 -03 [3636] CONTEXTO:  COPY demonstracoes_contabeis, linha 2: ""2023-01-01";"360783";"12391";"OUTROS CRÉDITOS DE OPERAÇÕES DE ASSISTÊNCIA MÉDICO-HOSPITALAR";0;0"
+2025-03-30 20:00:01.039 -03 [3636] COMANDO:  COPY demonstracoes_contabeis (reg_ans, cd_conta_contabil, descricao, vl_saldo_inicial, vl_saldo_final) 
+	FROM '../../2023/1T2023.csv' 
+	DELIMITER ';' 
+	CSV HEADER 
+	NULL '' 
+	ENCODING 'UTF8';
+2025-03-30 20:18:40.353 -03 [12064] LOG:  checkpoint starting: time
+2025-03-30 20:18:42.792 -03 [12064] LOG:  checkpoint complete: wrote 23 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=2.397 s, sync=0.029 s, total=2.439 s; sync files=22, longest=0.003 s, average=0.002 s; distance=102 kB, estimate=260 kB; lsn=0/168C518, redo lsn=0/168C4C0
+2025-03-30 20:21:21.064 -03 [3636] ERRO:  dado extra após última coluna esperada
+2025-03-30 20:21:21.064 -03 [3636] CONTEXTO:  COPY temp_import, linha 2: ""2023-01-01";"360783";"12391";"OUTROS CRÉDITOS DE OPERAÇÕES DE ASSISTÊNCIA MÉDICO-HOSPITALAR";0;0"
+2025-03-30 20:21:21.064 -03 [3636] COMANDO:  COPY temp_import (reg_ans, cd_conta_contabil, descricao, vl_saldo_inicial, vl_saldo_final) 
+	FROM '../../2023/1T2023.csv' 
+	DELIMITER ';' 
+	CSV HEADER 
+	NULL '' 
+	ENCODING 'UTF8';
+2025-03-30 20:22:07.328 -03 [3636] ERRO:  dado extra após última coluna esperada
+2025-03-30 20:22:07.328 -03 [3636] CONTEXTO:  COPY temp_import, linha 1: ""DATA";"REG_ANS";"CD_CONTA_CONTABIL";"DESCRICAO";"VL_SALDO_INICIAL";"VL_SALDO_FINAL""
+2025-03-30 20:22:07.328 -03 [3636] COMANDO:  COPY temp_import (reg_ans, cd_conta_contabil, descricao, vl_saldo_inicial, vl_saldo_final) 
+	FROM '../../2023/1T2023.csv' 
+	DELIMITER ';' 
+	ENCODING 'UTF8';
+2025-03-30 20:23:45.719 -03 [3636] ERRO:  coluna "data" da relação "temp_import" não existe
+2025-03-30 20:23:45.719 -03 [3636] COMANDO:  COPY temp_import (data, reg_ans, cd_conta_contabil, descricao, vl_saldo_inicial, vl_saldo_final) 
+	FROM '../../2023/1T2023.csv' 
+	DELIMITER ';' 
+	ENCODING 'UTF8';
+2025-03-30 20:24:44.984 -03 [3636] ERRO:  sintaxe de entrada é inválida para tipo date: ""DATA""
+2025-03-30 20:24:44.984 -03 [3636] CONTEXTO:  COPY temp_import, linha 1, coluna data: ""DATA""
+2025-03-30 20:24:44.984 -03 [3636] COMANDO:  COPY temp_import (data, reg_ans, cd_conta_contabil, descricao, vl_saldo_inicial, vl_saldo_final) 
+	FROM '../../2023/1T2023.csv' 
+	DELIMITER ';' 
+	ENCODING 'UTF8';
+2025-03-30 20:26:30.888 -03 [3636] ERRO:  valor do campo date/time está fora do intervalo: "0"
+2025-03-30 20:26:30.888 -03 [3636] DICA:  Talvez você necessite de uma definição diferente para "datestyle".
+2025-03-30 20:26:30.888 -03 [3636] CONTEXTO:  COPY temp_import, linha 2, coluna data: "0"
+2025-03-30 20:26:30.888 -03 [3636] COMANDO:  COPY temp_import (reg_ans, cd_conta_contabil, descricao, vl_saldo_inicial, vl_saldo_final, data) 
+	FROM '../../2023/1T2023.csv' 
+	DELIMITER ';' 
+	CSV HEADER 
+	NULL '' 
+	ENCODING 'UTF8';
+2025-03-30 20:28:40.807 -03 [12064] LOG:  checkpoint starting: time
+2025-03-30 20:28:41.263 -03 [12064] LOG:  checkpoint complete: wrote 5 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.444 s, sync=0.003 s, total=0.456 s; sync files=5, longest=0.001 s, average=0.001 s; distance=16 kB, estimate=236 kB; lsn=0/16907E8, redo lsn=0/1690790
+2025-03-30 20:39:05.168 -03 [3636] ERRO:  sintaxe de entrada é inválida para tipo date: "DATA"
+2025-03-30 20:39:05.168 -03 [3636] CONTEXTO:  COPY demonstracoes_contabeis, linha 1, coluna data: "DATA"
+2025-03-30 20:39:05.168 -03 [3636] COMANDO:  COPY demonstracoes_contabeis (data, reg_ans, cd_conta_contabil, descricao, vl_saldo_inicial, vl_saldo_final) 
+	FROM '../../2023/1T2023.csv' 
+	DELIMITER ';' 
+	NULL '' 
+	ENCODING 'UTF8';
+2025-03-30 20:39:41.897 -03 [3636] ERRO:  sintaxe de entrada é inválida para tipo numeric: "DESCRICAO"
+2025-03-30 20:39:41.897 -03 [3636] CONTEXTO:  COPY demonstracoes_contabeis, linha 1, coluna vl_saldo_inicial: "DESCRICAO"
+2025-03-30 20:39:41.897 -03 [3636] COMANDO:  COPY demonstracoes_contabeis (reg_ans, cd_conta_contabil, descricao, vl_saldo_inicial, vl_saldo_final, data) 
+	FROM '../../2023/1T2023.csv' 
+	DELIMITER ';' 
+	ENCODING 'UTF8';
+2025-03-30 20:43:40.278 -03 [12064] LOG:  checkpoint starting: time
+2025-03-30 20:43:40.967 -03 [12064] LOG:  checkpoint complete: wrote 7 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.655 s, sync=0.013 s, total=0.690 s; sync files=7, longest=0.003 s, average=0.002 s; distance=30 kB, estimate=215 kB; lsn=0/16982C8, redo lsn=0/1698270
+2025-03-30 20:48:40.577 -03 [12064] LOG:  checkpoint starting: time
+2025-03-30 20:52:20.849 -03 [12064] LOG:  checkpoint complete: wrote 2036 buffers (12.4%); 0 WAL file(s) added, 0 removed, 3 recycled; write=220.236 s, sync=0.018 s, total=220.273 s; sync files=11, longest=0.003 s, average=0.002 s; distance=55527 kB, estimate=55527 kB; lsn=0/4CD21D8, redo lsn=0/4CD2148
+2025-03-30 20:55:02.249 -03 [3636] ERRO:  erro de sintaxe em ou próximo a "SELECT" no caractere 73
+2025-03-30 20:55:02.249 -03 [3636] COMANDO:  select vl_saldo_final
+	from demonstracoes_contabeis
+	where vl_saldo_final(SELECT MAX(vl_saldo_final) FROM demonstracoes_contabeis);
+2025-03-30 21:11:02.289 -03 [3636] ERRO:  sintaxe de entrada é inválida para tipo numeric: "658124,3"
+2025-03-30 21:11:02.289 -03 [3636] CONTEXTO:  COPY demonstracoes_contabeis, linha 2, coluna vl_saldo_inicial: "658124,3"
+2025-03-30 21:11:02.289 -03 [3636] COMANDO:  COPY demonstracoes_contabeis
+	FROM '../../2023/2T2023.csv'
+	WITH (
+	FORMAT csv,
+	HEADER true,
+	DELIMITER ';',
+	ENCODING 'UTF8'
+	)
+	;
+2025-03-30 21:11:42.801 -03 [3636] ERRO:  erro de sintaxe em ou próximo a ";" no caractere 66
+2025-03-30 21:11:42.801 -03 [3636] COMANDO:  COPY demonstracoes_contabeis
+	FROM '../../2023/1T2023.csv'
+	WITH (
+	;
+	;
+	;
+	;
+	;
+	;
+	;
+	;
+	;
+	;
+	
+	
+	)
+	;
+2025-03-30 21:13:40.578 -03 [12064] LOG:  checkpoint starting: time
+2025-03-30 21:17:28.761 -03 [12064] LOG:  checkpoint complete: wrote 2096 buffers (12.8%); 0 WAL file(s) added, 0 removed, 4 recycled; write=228.144 s, sync=0.016 s, total=228.184 s; sync files=10, longest=0.005 s, average=0.002 s; distance=58061 kB, estimate=58061 kB; lsn=0/85857D8, redo lsn=0/8585748
+2025-03-30 21:23:40.639 -03 [12064] LOG:  checkpoint starting: time
+2025-03-30 21:28:10.130 -03 [12064] LOG:  checkpoint complete: wrote 2085 buffers (12.7%); 0 WAL file(s) added, 0 removed, 6 recycled; write=269.445 s, sync=0.021 s, total=269.492 s; sync files=10, longest=0.010 s, average=0.003 s; distance=108924 kB, estimate=108924 kB; lsn=0/171417D8, redo lsn=0/EFE4970
+2025-03-30 21:28:40.133 -03 [12064] LOG:  checkpoint starting: time
+2025-03-30 21:33:10.078 -03 [12064] LOG:  checkpoint complete: wrote 6326 buffers (38.6%); 0 WAL file(s) added, 0 removed, 9 recycled; write=269.893 s, sync=0.016 s, total=269.945 s; sync files=11, longest=0.006 s, average=0.002 s; distance=132481 kB, estimate=132481 kB; lsn=0/1A93AF10, redo lsn=0/17144F40
+2025-03-30 21:38:40.620 -03 [12064] LOG:  checkpoint starting: time
+2025-03-30 21:43:10.144 -03 [12064] LOG:  checkpoint complete: wrote 4374 buffers (26.7%); 0 WAL file(s) added, 0 removed, 6 recycled; write=269.469 s, sync=0.020 s, total=269.524 s; sync files=11, longest=0.004 s, average=0.002 s; distance=113330 kB, estimate=130566 kB; lsn=0/1DFF1AD8, redo lsn=0/1DFF1A48
+2025-03-30 22:08:40.192 -03 [12064] LOG:  checkpoint starting: time
+2025-03-30 22:08:40.656 -03 [12064] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.441 s, sync=0.005 s, total=0.465 s; sync files=2, longest=0.003 s, average=0.003 s; distance=5 kB, estimate=117510 kB; lsn=0/1DFF31D0, redo lsn=0/1DFF3178
+2025-03-30 22:10:12.155 -03 [3636] ERRO:  erro de sintaxe em ou próximo a "to" no caractere 57
+2025-03-30 22:10:12.155 -03 [3636] COMANDO:  ALTER TABLE operadoras_ativas
+	ALTER COLUMN Registro_ans to REG_ANS;
+2025-03-30 22:10:34.466 -03 [3636] ERRO:  erro de sintaxe em ou próximo a "to" no caractere 57
+2025-03-30 22:10:34.466 -03 [3636] COMANDO:  ALTER TABLE operadoras_ativas
+	ALTER COLUMN Registro_ans to REG_ANS;
+2025-03-30 22:11:02.762 -03 [3636] ERRO:  erro de sintaxe em ou próximo a "COLUMN" no caractere 44
+2025-03-30 22:11:02.762 -03 [3636] COMANDO:  ALTER TABLE operadoras_ativas RENAME
+	ALTER COLUMN Registro_ans to REG_ANS;
+2025-03-30 22:11:34.858 -03 [3636] ERRO:  erro de sintaxe em ou próximo a "COLUMN" no caractere 44
+2025-03-30 22:11:34.858 -03 [3636] COMANDO:  ALTER TABLE operadoras_ativas RENAME ALTER COLUMN Registro_ans to REG_ANS
+	;
+2025-03-30 22:12:25.171 -03 [3636] ERRO:  coluna "registro_ans" não existe
+2025-03-30 22:12:25.171 -03 [3636] COMANDO:  ALTER TABLE operadoras_ativas RENAME COLUMN Registro_ans TO REG_ANS;
+2025-03-30 22:13:40.664 -03 [12064] LOG:  checkpoint starting: time
+2025-03-30 22:13:41.018 -03 [12064] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.324 s, sync=0.009 s, total=0.354 s; sync files=4, longest=0.003 s, average=0.003 s; distance=16 kB, estimate=105760 kB; lsn=0/1DFF7598, redo lsn=0/1DFF7540
+2025-03-30 22:18:40.029 -03 [12064] LOG:  checkpoint starting: time
+2025-03-30 22:21:09.592 -03 [12064] LOG:  checkpoint complete: wrote 1376 buffers (8.4%); 0 WAL file(s) added, 0 removed, 0 recycled; write=149.538 s, sync=0.007 s, total=149.563 s; sync files=4, longest=0.003 s, average=0.002 s; distance=7 kB, estimate=95185 kB; lsn=0/1DFF9A98, redo lsn=0/1DFF9380
+2025-03-30 22:21:52.643 -03 [3636] ERRO:  erro de sintaxe em ou próximo a "q" no caractere 1
+2025-03-30 22:21:52.643 -03 [3636] COMANDO:  q
+	
+	 
+	;
+2025-03-30 22:33:28.314 -03 [3636] ERRO:  erro de sintaxe em ou próximo a "ORDER" no caractere 1
+2025-03-30 22:33:28.314 -03 [3636] COMANDO:  ORDER BY dc.vl_saldo_final DESC;
+2025-03-30 23:57:18.171 -03 [14428] LOG:  processo servidor (PID 3636) foi terminado pela exceção 0xC000013A
+2025-03-30 23:57:18.171 -03 [14428] DETALHE:  Processo que falhou estava executando: SELECT 
+	    oa.Razao_Social, 
+	    dc.vl_saldo_final AS despesas, 
+	    dc.descricao, 
+	    dc.DATA
+	FROM demonstracoes_contabeis dc
+	INNER JOIN operadoras_ativas oa 
+	ON TRIM(dc.REG_ANS) = TRIM(oa.REG_ANS)
+	WHERE 
+	    (dc.descricao ILIKE '%SINISTROS%' OR dc.descricao ILIKE '%EVENTOS%')
+	    AND dc.DATA >= '2024-10-01' 
+	    AND dc.DATA < '2025-01-01'  -- Apenas o ?ltimo trimestre de 2024
+	ORDER BY dc.vl_saldo_final DESC
+	LIMIT 10;
+2025-03-30 23:57:18.171 -03 [14428] DICA:  Veja o arquivo de cabeçalho C "ntstatus.h" para obter uma descrição do valor hexadecimal.
+2025-03-30 23:57:18.171 -03 [14428] LOG:  terminando quaisquer outros processos servidor ativos
+2025-03-30 23:57:18.183 -03 [14428] LOG:  todos os processos servidor foram terminados; reinicializando
+2025-03-30 23:57:18.339 -03 [7728] LOG:  sistema de banco de dados foi interrompido; última execução em 2025-03-30 22:21:09 -03
+2025-03-30 23:57:18.577 -03 [7728] LOG:  sistema de banco de dados não foi desligado corretamente; recuperação automática está em andamento
+2025-03-30 23:57:18.581 -03 [7728] LOG:  redo inicia em 0/1DFF9380
+2025-03-30 23:57:18.582 -03 [7728] LOG:  comprimento de registro inválido em 0/1DFF9B48: esperado pelo menos 24, obtido 0
+2025-03-30 23:57:18.582 -03 [7728] LOG:  refazer feito em 0/1DFF9B10 uso do sistema: CPU: usuário: 0.00 s, sistema: 0.00 s, decorrido: 0.00 s
+2025-03-30 23:57:18.587 -03 [8732] LOG:  checkpoint starting: end-of-recovery immediate wait
+2025-03-30 23:57:18.604 -03 [8732] LOG:  checkpoint complete: wrote 5 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.003 s, sync=0.005 s, total=0.020 s; sync files=4, longest=0.002 s, average=0.002 s; distance=1 kB, estimate=1 kB; lsn=0/1DFF9B48, redo lsn=0/1DFF9B48
+2025-03-30 23:57:18.615 -03 [14428] LOG:  sistema de banco de dados está pronto para aceitar conexões
+2025-03-30 23:57:19.708 -03 [14428] LOG:  processo trabalhador em segundo plano "logical replication launcher" (PID 3172) foi terminado pela exceção 0xC000013A
+2025-03-30 23:57:19.708 -03 [14428] DICA:  Veja o arquivo de cabeçalho C "ntstatus.h" para obter uma descrição do valor hexadecimal.
+2025-03-30 23:57:19.708 -03 [14428] LOG:  terminando quaisquer outros processos servidor ativos
+2025-03-30 23:57:19.711 -03 [14428] LOG:  todos os processos servidor foram terminados; reinicializando
+2025-03-30 23:57:19.892 -03 [13196] LOG:  sistema de banco de dados foi interrompido; última execução em 2025-03-30 23:57:18 -03
+2025-03-30 23:57:20.097 -03 [13196] LOG:  sistema de banco de dados não foi desligado corretamente; recuperação automática está em andamento
+2025-03-30 23:57:20.101 -03 [13196] LOG:  comprimento de registro inválido em 0/1DFF9BC0: esperado pelo menos 24, obtido 0
+2025-03-30 23:57:20.101 -03 [13196] LOG:  redo não é requerido
+2025-03-30 23:57:20.107 -03 [732] LOG:  checkpoint starting: end-of-recovery immediate wait
+2025-03-30 23:57:20.118 -03 [732] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.002 s, sync=0.002 s, total=0.015 s; sync files=2, longest=0.001 s, average=0.001 s; distance=0 kB, estimate=0 kB; lsn=0/1DFF9BC0, redo lsn=0/1DFF9BC0
+2025-03-30 23:57:20.128 -03 [14428] LOG:  sistema de banco de dados está pronto para aceitar conexões
+2025-03-30 23:57:22.692 -03 [14428] LOG:  processo trabalhador em segundo plano "logical replication launcher" (PID 16944) foi terminado pela exceção 0xC000013A
+2025-03-30 23:57:22.692 -03 [14428] DICA:  Veja o arquivo de cabeçalho C "ntstatus.h" para obter uma descrição do valor hexadecimal.
+2025-03-30 23:57:22.692 -03 [14428] LOG:  terminando quaisquer outros processos servidor ativos
+2025-03-30 23:57:22.696 -03 [14428] LOG:  todos os processos servidor foram terminados; reinicializando
+2025-03-30 23:57:22.735 -03 [15172] LOG:  sistema de banco de dados foi interrompido; última execução em 2025-03-30 23:57:20 -03
+2025-03-30 23:57:22.933 -03 [15172] LOG:  sistema de banco de dados não foi desligado corretamente; recuperação automática está em andamento
+2025-03-30 23:57:22.937 -03 [15172] LOG:  comprimento de registro inválido em 0/1DFF9C38: esperado pelo menos 24, obtido 0
+2025-03-30 23:57:22.937 -03 [15172] LOG:  redo não é requerido
+2025-03-30 23:57:22.942 -03 [9776] LOG:  checkpoint starting: end-of-recovery immediate wait
+2025-03-30 23:57:22.953 -03 [9776] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.002 s, sync=0.002 s, total=0.014 s; sync files=2, longest=0.001 s, average=0.001 s; distance=0 kB, estimate=0 kB; lsn=0/1DFF9C38, redo lsn=0/1DFF9C38
+2025-03-30 23:57:22.964 -03 [14428] LOG:  sistema de banco de dados está pronto para aceitar conexões
+2025-03-31 00:07:22.959 -03 [9776] LOG:  checkpoint starting: time
+2025-03-31 00:07:23.626 -03 [9776] LOG:  checkpoint complete: wrote 6 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.647 s, sync=0.009 s, total=0.667 s; sync files=4, longest=0.003 s, average=0.003 s; distance=15 kB, estimate=15 kB; lsn=0/1DFFDB88, redo lsn=0/1DFFDB30
+2025-03-31 00:12:37.365 -03 [10036] ERRO:  coluna "data" não existe no caractere 8
+2025-03-31 00:12:37.365 -03 [10036] COMANDO:  select data
+	from operadoras_ativas
+	order by razao_social
+	
+2025-03-31 00:19:47.342 -03 [10036] ERRO:  erro de sintaxe em ou próximo a "=" no caractere 60
+2025-03-31 00:19:47.342 -03 [10036] COMANDO:  select data
+	from demonstracoes_contabeis
+	where data like = 2024
+2025-03-31 00:20:27.169 -03 [10036] ERRO:  operador não existe: date = integer no caractere 55
+2025-03-31 00:20:27.169 -03 [10036] DICA:  Nenhum operador corresponde ao nome e tipo de dados dos argumentos fornecidos. Talvez seja necessário adicionar uma conversão de tipo de dados explícita.
+2025-03-31 00:20:27.169 -03 [10036] COMANDO:  select data
+	from demonstracoes_contabeis
+	where data = 2024
+2025-03-31 00:20:48.522 -03 [10036] ERRO:  função year(date) não existe no caractere 50
+2025-03-31 00:20:48.522 -03 [10036] DICA:  Nenhuma função corresponde com o nome e os tipos de argumentos informados. Você precisa adicionar conversões de tipo explícitas.
+2025-03-31 00:20:48.522 -03 [10036] COMANDO:  SELECT data
+	FROM demonstracoes_contabeis
+	WHERE YEAR(data) = 2024
+2025-03-31 00:20:57.624 -03 [10036] ERRO:  função data(date) não existe no caractere 50
+2025-03-31 00:20:57.624 -03 [10036] DICA:  Nenhuma função corresponde com o nome e os tipos de argumentos informados. Você precisa adicionar conversões de tipo explícitas.
+2025-03-31 00:20:57.624 -03 [10036] COMANDO:  SELECT data
+	FROM demonstracoes_contabeis
+	WHERE "data" (data) = 2024
+2025-03-31 00:21:05.822 -03 [10036] ERRO:  operador não existe: date = integer no caractere 57
+2025-03-31 00:21:05.822 -03 [10036] DICA:  Nenhum operador corresponde ao nome e tipo de dados dos argumentos fornecidos. Talvez seja necessário adicionar uma conversão de tipo de dados explícita.
+2025-03-31 00:21:05.822 -03 [10036] COMANDO:  SELECT data
+	FROM demonstracoes_contabeis
+	WHERE "data" = 2024
+2025-03-31 00:21:20.592 -03 [10036] ERRO:  coluna "2024" não existe no caractere 59
+2025-03-31 00:21:20.592 -03 [10036] COMANDO:  SELECT data
+	FROM demonstracoes_contabeis
+	WHERE "data" = "2024"
+2025-03-31 00:21:46.330 -03 [10036] ERRO:  operador não existe: date ~~ unknown no caractere 55
+2025-03-31 00:21:46.330 -03 [10036] DICA:  Nenhum operador corresponde ao nome e tipo de dados dos argumentos fornecidos. Talvez seja necessário adicionar uma conversão de tipo de dados explícita.
+2025-03-31 00:21:46.330 -03 [10036] COMANDO:  SELECT data
+	FROM demonstracoes_contabeis
+	WHERE data LIKE '2024%'
+2025-03-31 00:21:55.441 -03 [10036] ERRO:  tipo "data" não existe no caractere 50
+2025-03-31 00:21:55.441 -03 [10036] COMANDO:  SELECT data
+	FROM demonstracoes_contabeis
+	WHERE data '2024%'
+2025-03-31 00:40:33.516 -03 [10036] ERRO:  argumento do AND deve ser do tipo boolean, e não do tipo integer no caractere 291
+2025-03-31 00:40:33.516 -03 [10036] COMANDO:  SELECT descricao, dc.vl_saldo_final AS despesas
+	FROM demonstracoes_contabeis dc
+	INNER JOIN operadoras_ativas oa 
+	ON TRIM(dc.REG_ANS) = TRIM(oa.REG_ANS)
+	WHERE 
+	dc.descricao ILIKE '%EVENTOS/SINISTROS CONHECIDOS OU AVISADOS DE ASSISTÊNCIA À SAÚDE%'
+	ORDER BY dc.vl_saldo_final DESC LIMIT 10
+	AND dc.DATA >= CURRENT_DATE - INTERVAL '3 months'
+2025-03-31 00:42:39.255 -03 [10036] ERRO:  erro de sintaxe em ou próximo a "ORDER" no caractere 1
+2025-03-31 00:42:39.255 -03 [10036] COMANDO:  ORDER BY dc.vl_saldo_final DESC LIMIT 10
+2025-03-31 00:44:29.162 -03 [10036] ERRO:  erro de sintaxe em ou próximo a "AND" no caractere 285
+2025-03-31 00:44:29.162 -03 [10036] COMANDO:  SELECT descricao, dc.vl_saldo_final AS despesas
+	FROM demonstracoes_contabeis dc
+	INNER JOIN operadoras_ativas oa 
+	ON TRIM(dc.REG_ANS) = TRIM(oa.REG_ANS)
+	WHERE 
+	dc.descricao ILIKE '%EVENTOS/SINISTROS CONHECIDOS OU AVISADOS DE ASSISTÊNCIA À SAÚDE%'
+	ORDER BY dc.vl_saldo_final desc,AND dc.DATA >= CURRENT_DATE - INTERVAL '3 months'
+	LIMIT 10
+2025-03-31 00:46:00.427 -03 [10036] ERRO:  erro de sintaxe em ou próximo a "BYdc" no caractere 259
+2025-03-31 00:46:00.427 -03 [10036] COMANDO:  SELECT descricao, dc.vl_saldo_final AS despesas
+	FROM demonstracoes_contabeis dc
+	INNER JOIN operadoras_ativas oa 
+	ON TRIM(dc.REG_ANS) = TRIM(oa.REG_ANS)
+	WHERE 
+	dc.descricao ILIKE '%EVENTOS/SINISTROS CONHECIDOS OU AVISADOS DE ASSISTÊNCIA À SAÚDE%'
+	ORDER BYdc.DATA >= CURRENT_DATE - INTERVAL '3 months', dc.vl_saldo_final desc
+	LIMIT 10
+2025-03-31 00:56:33.809 -03 [1264] ERRO:  erro de sintaxe em ou próximo a "LIMIT" no caractere 35
+2025-03-31 00:56:33.809 -03 [1264] COMANDO:  -- ordena pelas maiores despesas
+	LIMIT 10
+2025-03-31 00:58:19.108 -03 [10036] ERRO:  erro de sintaxe em ou próximo a "=>" no caractere 295
+2025-03-31 00:58:19.108 -03 [10036] COMANDO:  SELECT descricao, dc.vl_saldo_final AS despesas, "data" 
+	FROM demonstracoes_contabeis dc
+	INNER JOIN operadoras_ativas oa 
+	ON TRIM(dc.REG_ANS) = TRIM(oa.REG_ANS)
+	WHERE 
+	dc.descricao ILIKE '%EVENTOS/SINISTROS CONHECIDOS OU AVISADOS DE ASSISTÊNCIA À SAÚDE%'
+	ORDER by EXTRACT(YEAR FROM data) => 2024, dc.vl_saldo_final desc
+	LIMIT 10
+2025-03-31 01:04:16.785 -03 [10036] ERRO:  erro de sintaxe em ou próximo a "AND" no caractere 266
+2025-03-31 01:04:16.785 -03 [10036] COMANDO:  SELECT descricao, dc.vl_saldo_final AS despesas, dc.data
+	FROM demonstracoes_contabeis dc
+	INNER JOIN operadoras_ativas oa 
+	ON TRIM(dc.REG_ANS) = TRIM(oa.REG_ANS)
+	WHERE 
+	dc.descricao ILIKE '%EVENTOS/SINISTROS CONHECIDOS OU AVISADOS DE ASSISTÊNCIA À SAÚDE%'
+	and AND dc.data >= CURRENT_DATE - INTERVAL '3 months'
+	ORDER by dc.vl_saldo_final, dc.data DESC
+	LIMIT 10
+2025-03-31 01:11:13.916 -03 [10036] ERRO:  erro de sintaxe em ou próximo a "," no caractere 296
+2025-03-31 01:11:13.916 -03 [10036] COMANDO:  SELECT descricao, dc.vl_saldo_final AS despesas, dc.data
+	FROM demonstracoes_contabeis dc
+	INNER JOIN operadoras_ativas oa 
+	ON TRIM(dc.REG_ANS) = TRIM(oa.REG_ANS)
+	WHERE 
+	dc.descricao ILIKE '%EVENTOS/SINISTROS CONHECIDOS OU AVISADOS DE ASSISTÊNCIA À SAÚDE%'
+	and EXTRACT(YEAR FROM data) = 2024, dc.data >= CURRENT_DATE - INTERVAL '3 months'
+	ORDER by dc.vl_saldo_final
+2025-03-31 01:29:21.835 -03 [10036] ERRO:  operador não existe: date ~~ unknown no caractere 268
+2025-03-31 01:29:21.835 -03 [10036] DICA:  Nenhum operador corresponde ao nome e tipo de dados dos argumentos fornecidos. Talvez seja necessário adicionar uma conversão de tipo de dados explícita.
+2025-03-31 01:29:21.835 -03 [10036] COMANDO:  SELECT descricao, dc.vl_saldo_final AS despesas, data
+	FROM demonstracoes_contabeis dc
+	INNER JOIN operadoras_ativas oa 
+	ON TRIM(dc.REG_ANS) = TRIM(oa.REG_ANS)
+	WHERE 
+	dc.descricao ILIKE '%EVENTOS/SINISTROS CONHECIDOS OU AVISADOS DE ASSISTÊNCIA À SAÚDE%'
+	and data LIKE '2024%'
+2025-03-31 01:29:26.203 -03 [10036] ERRO:  operador não existe: date ~~ unknown no caractere 268
+2025-03-31 01:29:26.203 -03 [10036] DICA:  Nenhum operador corresponde ao nome e tipo de dados dos argumentos fornecidos. Talvez seja necessário adicionar uma conversão de tipo de dados explícita.
+2025-03-31 01:29:26.203 -03 [10036] COMANDO:  SELECT descricao, dc.vl_saldo_final AS despesas, data
+	FROM demonstracoes_contabeis dc
+	INNER JOIN operadoras_ativas oa 
+	ON TRIM(dc.REG_ANS) = TRIM(oa.REG_ANS)
+	WHERE 
+	dc.descricao ILIKE '%EVENTOS/SINISTROS CONHECIDOS OU AVISADOS DE ASSISTÊNCIA À SAÚDE%'
+	and data LIKE '2024%'
+	ORDER by dc.vl_saldo_final desc
+	LIMIT 10
+2025-03-31 01:29:37.138 -03 [10036] ERRO:  operador não existe: date ~~ unknown no caractere 273
+2025-03-31 01:29:37.138 -03 [10036] DICA:  Nenhum operador corresponde ao nome e tipo de dados dos argumentos fornecidos. Talvez seja necessário adicionar uma conversão de tipo de dados explícita.
+2025-03-31 01:29:37.138 -03 [10036] COMANDO:  SELECT descricao, dc.vl_saldo_final AS despesas, data
+	FROM demonstracoes_contabeis dc
+	INNER JOIN operadoras_ativas oa 
+	ON TRIM(dc.REG_ANS) = TRIM(oa.REG_ANS)
+	WHERE 
+	dc.descricao ILIKE '%EVENTOS/SINISTROS CONHECIDOS OU AVISADOS DE ASSISTÊNCIA À SAÚDE%'
+	and dc."data" LIKE '2024%'
+	ORDER by dc.vl_saldo_final desc
+	LIMIT 10
+2025-03-31 01:30:30.411 -03 [10036] ERRO:  erro de sintaxe em ou próximo a "ORDER" no caractere 1
+2025-03-31 01:30:30.411 -03 [10036] COMANDO:  ORDER by dc.DATA >= CURRENT_DATE - INTERVAL '3 months',dc.vl_saldo_final desc
+	LIMIT 10
+2025-03-31 01:38:10.194 -03 [8920] ERRO:  erro de sintaxe em ou próximo a "CONHECIDOS" no caractere 2
+2025-03-31 01:38:10.194 -03 [8920] COMANDO:   CONHECIDOS OU AVISADOS DE ASSISTÊNCIA À SAÚDE%
+2025-03-31 01:45:13.585 -03 [10036] ERRO:  para SELECT DISTINCT, expressões ORDER BY devem aparecer na lista de seleção no caractere 336
+2025-03-31 01:45:13.585 -03 [10036] COMANDO:  SELECT distinct descricao, dc.vl_saldo_final AS despesas, data
+	FROM demonstracoes_contabeis dc
+	INNER JOIN operadoras_ativas oa 
+	ON TRIM(dc.REG_ANS) = TRIM(oa.REG_ANS)
+	WHERE 
+	dc.descricao ILIKE '%EVENTOS/SINISTROS CONHECIDOS OU AVISADOS DE ASSISTÊNCIA À SAÚDE%'
+	and EXTRACT(YEAR FROM data) = 2024
+	ORDER by dc.vl_saldo_final desc,dc.DATA >= CURRENT_DATE - INTERVAL '3 months' desc
+	LIMIT 10
+2025-03-31 01:45:35.314 -03 [10036] ERRO:  erro de sintaxe em ou próximo a "FROM" no caractere 56
+2025-03-31 01:45:35.314 -03 [10036] COMANDO:  SELECT data,descricao, dc.vl_saldo_final AS despesas,
+	FROM demonstracoes_contabeis dc
+	INNER JOIN operadoras_ativas oa 
+	ON TRIM(dc.REG_ANS) = TRIM(oa.REG_ANS)
+	WHERE 
+	dc.descricao ILIKE '%EVENTOS/SINISTROS CONHECIDOS OU AVISADOS DE ASSISTÊNCIA À SAÚDE%'
+	and EXTRACT(YEAR FROM data) = 2024
+	ORDER by dc.vl_saldo_final desc,dc.DATA >= CURRENT_DATE - INTERVAL '3 months' desc
+	LIMIT 10
+2025-03-31 01:45:44.944 -03 [10036] ERRO:  erro de sintaxe em ou próximo a "FROM" no caractere 60
+2025-03-31 01:45:44.944 -03 [10036] COMANDO:  SELECT dc.data, descricao, dc.vl_saldo_final AS despesas,
+	FROM demonstracoes_contabeis dc
+	INNER JOIN operadoras_ativas oa 
+	ON TRIM(dc.REG_ANS) = TRIM(oa.REG_ANS)
+	WHERE 
+	dc.descricao ILIKE '%EVENTOS/SINISTROS CONHECIDOS OU AVISADOS DE ASSISTÊNCIA À SAÚDE%'
+	and EXTRACT(YEAR FROM data) = 2024
+	ORDER by dc.vl_saldo_final desc,dc.DATA >= CURRENT_DATE - INTERVAL '3 months' desc
+	LIMIT 10
+2025-03-31 01:51:49.277 -03 [8920] ERRO:  coluna oa.nome_operadora não existe no caractere 8
+2025-03-31 01:51:49.277 -03 [8920] COMANDO:  SELECT oa.nome_operadora, dc.descricao, dc.vl_saldo_final AS despesas, dc.data
+	FROM demonstracoes_contabeis dc
+	INNER JOIN operadoras_ativas oa 
+	ON TRIM(dc.REG_ANS) = TRIM(oa.REG_ANS)
+	WHERE 
+	dc.descricao ILIKE '%EVENTOS/SINISTROS CONHECIDOS OU AVISADOS DE ASSISTÊNCIA À SAÚDE MÉDICO HOSPITALAR%'
+	AND DATE(dc.data) >= CURRENT_DATE - INTERVAL '3 months'
+	ORDER BY dc.vl_saldo_final DESC  -- Ordena pelas maiores despesas
+	LIMIT 10
+2025-03-31 01:51:59.964 -03 [8920] ERRO:  coluna oa.nome_operadora não existe no caractere 8
+2025-03-31 01:51:59.964 -03 [8920] COMANDO:  SELECT oa.nome_operadora, dc.descricao, dc.vl_saldo_final AS despesas, dc.data
+	FROM demonstracoes_contabeis dc
+	INNER JOIN operadoras_ativas oa 
+	ON TRIM(dc.REG_ANS) = TRIM(oa.REG_ANS)
+	WHERE 
+	dc.descricao ILIKE '%EVENTOS/SINISTROS CONHECIDOS OU AVISADOS DE ASSISTÊNCIA À SAÚDE MÉDICO HOSPITALAR%'
+	AND DATE(dc.data) >= CURRENT_DATE - INTERVAL '3 months'
+	ORDER BY dc.vl_saldo_final DESC
+	LIMIT 10
+2025-03-31 02:01:56.795 -03 [8920] ERRO:  erro de sintaxe em ou próximo a "JOIN" no caractere 68
+2025-03-31 02:01:56.795 -03 [8920] COMANDO:  SELECT dc.descricao, dc.vl_saldo_final AS despesas, dc.data
+	INNER JOIN operadoras_ativas oa 
+	ON TRIM(dc.REG_ANS) = TRIM(oa.REG_ANS)
+	where descricao ilike '%EVENTOS/ SINISTROS CONHECIDOS OU AVISADOS  DE ASSISTÊNCIA A SAÚDE MEDICO HOSPITALAR %'
+2025-03-31 02:09:58.298 -03 [14428] LOG:  pedido de desligamento rápido foi recebido
+2025-03-31 02:09:58.300 -03 [14428] LOG:  interrompendo quaisquer transações ativas
+2025-03-31 02:09:58.304 -03 [14428] LOG:  processo trabalhador em segundo plano "logical replication launcher" (PID 18988) terminou com código de retorno 1
+2025-03-31 02:09:58.305 -03 [9776] LOG:  desligando
+2025-03-31 02:09:58.307 -03 [9776] LOG:  checkpoint starting: shutdown immediate
+2025-03-31 02:09:58.322 -03 [9776] LOG:  checkpoint complete: wrote 5 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.002 s, sync=0.006 s, total=0.018 s; sync files=4, longest=0.002 s, average=0.002 s; distance=0 kB, estimate=14 kB; lsn=0/1DFFDC38, redo lsn=0/1DFFDC38
+2025-03-31 02:09:58.333 -03 [14428] LOG:  sistema de banco de dados está desligado
+2025-03-31 17:47:59.262 -03 [20768] FATAL:  arquivo de bloqueio "postmaster.pid" já existe
+2025-03-31 17:47:59.262 -03 [20768] DICA:  Outro postmaster (PID 14668) está executando sob o diretório de dados "C:/Desenv/PostgreSQL Windows/pgsql/data"?
+2025-03-31 17:48:22.774 -03 [30060] LOG:  iniciando PostgreSQL 17.4 on x86_64-windows, compiled by msvc-19.42.34436, 64-bit
+2025-03-31 17:48:22.777 -03 [30060] LOG:  escutando no endereço IPv6 "::1", porta 5432
+2025-03-31 17:48:22.777 -03 [30060] LOG:  escutando no endereço IPv4 "127.0.0.1", porta 5432
+2025-03-31 17:48:22.824 -03 [15772] LOG:  sistema de banco de dados foi desligado em 2025-03-31 17:48:19 -03
+2025-03-31 17:48:22.839 -03 [30060] LOG:  sistema de banco de dados está pronto para aceitar conexões
+2025-03-31 17:48:27.955 -03 [10844] FATAL:  role "postgres" não existe
+2025-03-31 17:49:20.838 -03 [30060] LOG:  processo trabalhador em segundo plano "logical replication launcher" (PID 15196) foi terminado pela exceção 0xC000013A
+2025-03-31 17:49:20.838 -03 [30060] DICA:  Veja o arquivo de cabeçalho C "ntstatus.h" para obter uma descrição do valor hexadecimal.
+2025-03-31 17:49:20.838 -03 [30060] LOG:  terminando quaisquer outros processos servidor ativos
+2025-03-31 17:49:20.841 -03 [30060] LOG:  todos os processos servidor foram terminados; reinicializando
+2025-03-31 17:49:20.884 -03 [19312] LOG:  sistema de banco de dados foi interrompido; última execução em 2025-03-31 17:48:22 -03
+2025-03-31 17:49:20.981 -03 [19312] LOG:  sistema de banco de dados não foi desligado corretamente; recuperação automática está em andamento
+2025-03-31 17:49:20.985 -03 [19312] LOG:  redo inicia em 0/15B0430
+2025-03-31 17:49:20.985 -03 [19312] LOG:  comprimento de registro inválido em 0/15B0468: esperado pelo menos 24, obtido 0
+2025-03-31 17:49:20.985 -03 [19312] LOG:  refazer feito em 0/15B0430 uso do sistema: CPU: usuário: 0.00 s, sistema: 0.00 s, decorrido: 0.00 s
+2025-03-31 17:49:20.990 -03 [10960] LOG:  checkpoint starting: end-of-recovery immediate wait
+2025-03-31 17:49:21.002 -03 [10960] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.002 s, sync=0.002 s, total=0.015 s; sync files=2, longest=0.001 s, average=0.001 s; distance=0 kB, estimate=0 kB; lsn=0/15B0468, redo lsn=0/15B0468
+2025-03-31 17:49:21.013 -03 [30060] LOG:  sistema de banco de dados está pronto para aceitar conexões
+2025-03-31 17:49:22.398 -03 [30060] LOG:  processo trabalhador em segundo plano "logical replication launcher" (PID 12312) foi terminado pela exceção 0xC000013A
+2025-03-31 17:49:22.398 -03 [30060] DICA:  Veja o arquivo de cabeçalho C "ntstatus.h" para obter uma descrição do valor hexadecimal.
+2025-03-31 17:49:22.398 -03 [30060] LOG:  terminando quaisquer outros processos servidor ativos
+2025-03-31 17:49:22.400 -03 [30060] LOG:  pedido de desligamento rápido foi recebido
+^C

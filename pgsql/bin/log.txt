@@ -1,0 +1,217 @@
+2025-03-30 20:59:36.539 GMT [1320] LOG:  erro de sintaxe no arquivo "C:/Desenv/PostgreSQL Windows/pgsql/data/postgresql.auto.conf" linha 1, próximo a informação ""
+2025-03-30 20:59:36.539 GMT [1320] FATAL:  arquivo de configuração "postgresql.auto.conf" contém erros
+2025-03-30 20:59:53.453 GMT [4176] LOG:  erro de sintaxe no arquivo "C:/Desenv/PostgreSQL Windows/pgsql/data/postgresql.auto.conf" linha 1, próximo a informação ""
+2025-03-30 20:59:53.453 GMT [4176] FATAL:  arquivo de configuração "postgresql.auto.conf" contém erros
+2025-03-31 12:46:16.680 -03 [1700] LOG:  iniciando PostgreSQL 17.4 on x86_64-windows, compiled by msvc-19.42.34436, 64-bit
+2025-03-31 12:46:16.683 -03 [1700] LOG:  escutando no endereço IPv6 "::1", porta 5432
+2025-03-31 12:46:16.683 -03 [1700] LOG:  escutando no endereço IPv4 "127.0.0.1", porta 5432
+2025-03-31 12:46:16.737 -03 [11764] LOG:  sistema de banco de dados foi desligado em 2025-03-31 02:09:58 -03
+2025-03-31 12:46:16.759 -03 [1700] LOG:  sistema de banco de dados está pronto para aceitar conexões
+2025-03-31 12:51:16.741 -03 [12608] LOG:  checkpoint starting: time
+2025-03-31 12:51:16.755 -03 [12608] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.003 s, sync=0.003 s, total=0.017 s; sync files=2, longest=0.002 s, average=0.002 s; distance=0 kB, estimate=0 kB; lsn=0/1DFFDD40, redo lsn=0/1DFFDCE8
+2025-03-31 13:04:16.164 -03 [6996] ERRO:  erro de sintaxe em ou próximo a "dc" no caractere 313
+2025-03-31 13:04:16.164 -03 [6996] COMANDO:  SELECT oa.razao_social as operadoras,dc.data, descricao, dc.vl_saldo_final AS despesas
+	FROM demonstracoes_contabeis dc
+	INNER JOIN operadoras_ativas oa 
+	ON TRIM(dc.REG_ANS) = TRIM(oa.REG_ANS)
+	WHERE 
+	dc.descricao ILIKE '%EVENTOS/ SINISTROS CONHECIDOS OU AVISADOS  DE ASSISTÊNCIA A SAÚDE MEDICO HOSPITALAR %'
+	dc.DATA >= CURRENT_DATE - INTERVAL '3 months'
+	ORDER by dc.vl_saldo_final desc
+	LIMIT 10
+2025-03-31 13:10:05.921 -03 [6996] ERRO:  coluna oa.data não existe no caractere 317
+2025-03-31 13:10:05.921 -03 [6996] DICA:  Talvez você queira fazer referência à coluna "dc.data".
+2025-03-31 13:10:05.921 -03 [6996] COMANDO:  SELECT oa.razao_social as operadoras,dc.data, descricao, dc.vl_saldo_final AS despesas
+	FROM demonstracoes_contabeis dc
+	INNER JOIN operadoras_ativas oa 
+	ON TRIM(dc.REG_ANS) = TRIM(oa.REG_ANS)
+	WHERE 
+	dc.descricao ILIKE '%EVENTOS/ SINISTROS CONHECIDOS OU AVISADOS  DE ASSISTÊNCIA A SAÚDE MEDICO HOSPITALAR %'
+	and oa.data >= '3 months'
+	ORDER by dc.vl_saldo_final desc
+	LIMIT 10
+2025-03-31 13:10:15.864 -03 [6996] ERRO:  coluna oa.data não existe no caractere 317
+2025-03-31 13:10:15.864 -03 [6996] DICA:  Talvez você queira fazer referência à coluna "dc.data".
+2025-03-31 13:10:15.864 -03 [6996] COMANDO:  SELECT oa.razao_social as operadoras,dc.data, descricao, dc.vl_saldo_final AS despesas
+	FROM demonstracoes_contabeis dc
+	INNER JOIN operadoras_ativas oa 
+	ON TRIM(dc.REG_ANS) = TRIM(oa.REG_ANS)
+	WHERE 
+	dc.descricao ILIKE '%EVENTOS/ SINISTROS CONHECIDOS OU AVISADOS  DE ASSISTÊNCIA A SAÚDE MEDICO HOSPITALAR %'
+	and oa.data >= CURRENT_DATE - INTERVAL '3 months'
+	ORDER by dc.vl_saldo_final desc
+	LIMIT 10
+2025-03-31 13:10:19.167 -03 [6996] ERRO:  coluna oa.data não existe no caractere 317
+2025-03-31 13:10:19.167 -03 [6996] DICA:  Talvez você queira fazer referência à coluna "dc.data".
+2025-03-31 13:10:19.167 -03 [6996] COMANDO:  SELECT oa.razao_social as operadoras,dc.data, descricao, dc.vl_saldo_final AS despesas
+	FROM demonstracoes_contabeis dc
+	INNER JOIN operadoras_ativas oa 
+	ON TRIM(dc.REG_ANS) = TRIM(oa.REG_ANS)
+	WHERE 
+	dc.descricao ILIKE '%EVENTOS/ SINISTROS CONHECIDOS OU AVISADOS  DE ASSISTÊNCIA A SAÚDE MEDICO HOSPITALAR %'
+	and oa.data >= CURRENT_DATE - INTERVAL '3 months'
+	ORDER by dc.vl_saldo_final desc
+	LIMIT 10
+2025-03-31 13:10:57.094 -03 [6996] ERRO:  sintaxe de entrada é inválida para tipo date: "3 months" no caractere 328
+2025-03-31 13:10:57.094 -03 [6996] COMANDO:  SELECT oa.razao_social as operadoras,dc.data, descricao, dc.vl_saldo_final AS despesas
+	FROM demonstracoes_contabeis dc
+	INNER JOIN operadoras_ativas oa 
+	ON TRIM(dc.REG_ANS) = TRIM(oa.REG_ANS)
+	WHERE 
+	dc.descricao ILIKE '%EVENTOS/ SINISTROS CONHECIDOS OU AVISADOS  DE ASSISTÊNCIA A SAÚDE MEDICO HOSPITALAR %'
+	and dc.data >= '3 months'
+	ORDER by dc.vl_saldo_final desc
+	LIMIT 10
+2025-03-31 13:24:57.940 -03 [6996] ERRO:  coluna "oa.razao_social" deve aparecer na cláusula GROUP BY ou ser usada em uma função de agregação no caractere 8
+2025-03-31 13:24:57.940 -03 [6996] COMANDO:  SELECT oa.razao_social as operadoras,dc.data, descricao, dc.vl_saldo_final AS despesas, max(dc.data)
+	FROM demonstracoes_contabeis dc
+	INNER JOIN operadoras_ativas oa 
+	ON TRIM(dc.REG_ANS) = TRIM(oa.REG_ANS)
+	WHERE 
+	dc.descricao ILIKE '%EVENTOS/ SINISTROS CONHECIDOS OU AVISADOS  DE ASSISTÊNCIA A SAÚDE MEDICO HOSPITALAR %'
+	and extract(year from data) = 2024
+	ORDER by dc.vl_saldo_final desc
+	limit 10
+2025-03-31 13:25:31.118 -03 [6996] ERRO:  erro de sintaxe em ou próximo a "group" no caractere 396
+2025-03-31 13:25:31.118 -03 [6996] COMANDO:  SELECT oa.razao_social as operadoras,dc.data, descricao, dc.vl_saldo_final AS despesas, max(dc.data)
+	FROM demonstracoes_contabeis dc
+	INNER JOIN operadoras_ativas oa 
+	ON TRIM(dc.REG_ANS) = TRIM(oa.REG_ANS)
+	WHERE 
+	dc.descricao ILIKE '%EVENTOS/ SINISTROS CONHECIDOS OU AVISADOS  DE ASSISTÊNCIA A SAÚDE MEDICO HOSPITALAR %'
+	and extract(year from data) = 2024
+	ORDER by dc.vl_saldo_final desc
+	group by oa.razao_social
+	limit 10
+2025-03-31 13:26:01.992 -03 [6996] ERRO:  erro de sintaxe em ou próximo a "group" no caractere 396
+2025-03-31 13:26:01.992 -03 [6996] COMANDO:  SELECT oa.razao_social as operadoras,dc.data, descricao, dc.vl_saldo_final AS despesas, max(dc.data)
+	FROM demonstracoes_contabeis dc
+	INNER JOIN operadoras_ativas oa 
+	ON TRIM(dc.REG_ANS) = TRIM(oa.REG_ANS)
+	WHERE 
+	dc.descricao ILIKE '%EVENTOS/ SINISTROS CONHECIDOS OU AVISADOS  DE ASSISTÊNCIA A SAÚDE MEDICO HOSPITALAR %'
+	and extract(year from data) = 2024
+	ORDER by dc.vl_saldo_final desc
+	group by oa.razao_social,dc.data,dc.vl_saldo_final
+	limit 10
+2025-03-31 13:26:23.410 -03 [6996] ERRO:  coluna "dc.descricao" deve aparecer na cláusula GROUP BY ou ser usada em uma função de agregação no caractere 47
+2025-03-31 13:26:23.410 -03 [6996] COMANDO:  SELECT oa.razao_social as operadoras,dc.data, descricao, dc.vl_saldo_final AS despesas, max(dc.data)
+	FROM demonstracoes_contabeis dc
+	INNER JOIN operadoras_ativas oa 
+	ON TRIM(dc.REG_ANS) = TRIM(oa.REG_ANS)
+	WHERE 
+	dc.descricao ILIKE '%EVENTOS/ SINISTROS CONHECIDOS OU AVISADOS  DE ASSISTÊNCIA A SAÚDE MEDICO HOSPITALAR %'
+	and extract(year from data) = 2024
+	group by oa.razao_social,dc.data,dc.vl_saldo_final
+	ORDER by dc.vl_saldo_final desc
+	limit 10
+2025-03-31 13:30:23.289 -03 [6996] ERRO:  erro de sintaxe em ou próximo a "select" no caractere 96
+2025-03-31 13:30:23.289 -03 [6996] COMANDO:  SELECT oa.razao_social as operadoras,dc.data, dc.descricao, dc.vl_saldo_final AS despesas, max(select data from demonstracoes_contabeis)
+	FROM demonstracoes_contabeis dc
+	INNER JOIN operadoras_ativas oa 
+	ON TRIM(dc.REG_ANS) = TRIM(oa.REG_ANS)
+	WHERE 
+	dc.descricao ILIKE '%EVENTOS/ SINISTROS CONHECIDOS OU AVISADOS  DE ASSISTÊNCIA A SAÚDE MEDICO HOSPITALAR %'
+	group by oa.razao_social,dc.data,dc.descricao ,dc.vl_saldo_final
+	ORDER by dc.vl_saldo_final
+	limit 10
+2025-03-31 13:58:35.388 -03 [1700] LOG:  pedido de desligamento rápido foi recebido
+2025-03-31 13:58:35.391 -03 [1700] LOG:  interrompendo quaisquer transações ativas
+2025-03-31 13:58:35.391 -03 [6996] FATAL:  terminando a conexão devido a um comando do administrador
+2025-03-31 13:58:35.392 -03 [13276] FATAL:  terminando a conexão devido a um comando do administrador
+2025-03-31 13:58:35.393 -03 [13648] FATAL:  terminando a conexão devido a um comando do administrador
+2025-03-31 13:58:35.393 -03 [17280] FATAL:  terminando a conexão devido a um comando do administrador
+2025-03-31 13:58:35.396 -03 [1700] LOG:  processo trabalhador em segundo plano "logical replication launcher" (PID 6560) terminou com código de retorno 1
+2025-03-31 13:58:35.398 -03 [12608] LOG:  desligando
+2025-03-31 13:58:35.401 -03 [12608] LOG:  checkpoint starting: shutdown immediate
+2025-03-31 13:58:35.410 -03 [12608] LOG:  checkpoint complete: wrote 0 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.012 s; sync files=0, longest=0.000 s, average=0.000 s; distance=0 kB, estimate=0 kB; lsn=0/1DFFDDF0, redo lsn=0/1DFFDDF0
+2025-03-31 13:58:35.416 -03 [1700] LOG:  sistema de banco de dados está desligado
+2025-03-31 15:35:27.110 -03 [10800] LOG:  iniciando PostgreSQL 17.4 on x86_64-windows, compiled by msvc-19.42.34436, 64-bit
+2025-03-31 15:35:27.113 -03 [10800] LOG:  escutando no endereço IPv6 "::1", porta 5432
+2025-03-31 15:35:27.113 -03 [10800] LOG:  escutando no endereço IPv4 "127.0.0.1", porta 5432
+2025-03-31 15:35:27.156 -03 [7492] LOG:  sistema de banco de dados foi desligado em 2025-03-31 15:34:52 -03
+2025-03-31 15:35:27.171 -03 [10800] LOG:  sistema de banco de dados está pronto para aceitar conexões
+2025-03-31 15:38:48.489 -03 [25460] ERRO:  erro de sintaxe em ou próximo a "q" no caractere 1
+2025-03-31 15:38:48.489 -03 [25460] COMANDO:  q
+	SELECT oa.razao_social as operadoras,dc.descricao , dc.vl_saldo_final AS despesas, dc.data
+	FROM demonstracoes_contabeis dc
+	INNER JOIN operadoras_ativas oa 
+	ON TRIM(dc.REG_ANS) = TRIM(oa.REG_ANS)
+	where descricao ilike '%MEDICO HOSPITALAR%'
+	and extract(year from data) = 2024
+	order by dc.vl_saldo_final desc
+	limit 10;
+2025-03-31 15:40:27.157 -03 [8428] LOG:  checkpoint starting: time
+2025-03-31 15:40:27.939 -03 [8428] LOG:  checkpoint complete: wrote 10 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.766 s, sync=0.007 s, total=0.784 s; sync files=6, longest=0.003 s, average=0.002 s; distance=5 kB, estimate=5 kB; lsn=0/1EF45B70, redo lsn=0/1EF45B18
+2025-03-31 15:45:12.240 -03 [25460] ERRO:  sequência de bytes é inválida para codificação "UTF8": 0xc9 0x44
+2025-03-31 15:45:12.240 -03 [25460] COMANDO:  UPDATE demonstracoes_contabeis
+	SET descricao = convert_from(descricao::bytea, 'UTF8');
+2025-03-31 15:45:33.599 -03 [25460] ERRO:  expressão regular é inválida: invalid character range
+2025-03-31 15:45:33.599 -03 [25460] COMANDO:  UPDATE demonstracoes_contabeis
+	SET descricao = REGEXP_REPLACE(descricao, '[^a-zA-Z0-9·-˜ ]', '', 'g');
+2025-03-31 15:46:19.111 -03 [25460] ERRO:  função unaccent(text) não existe no caractere 202
+2025-03-31 15:46:19.111 -03 [25460] DICA:  Nenhuma função corresponde com o nome e os tipos de argumentos informados. Você precisa adicionar conversões de tipo explícitas.
+2025-03-31 15:46:19.111 -03 [25460] COMANDO:  SELECT oa.razao_social as operadoras,dc.data, dc.descricao, dc.vl_saldo_final AS despesas
+	FROM demonstracoes_contabeis dc
+	INNER JOIN operadoras_ativas oa 
+	ON TRIM(dc.REG_ANS) = TRIM(oa.REG_ANS)
+	WHERE 
+	unaccent(dc.descricao) ILIKE unaccent('%EVENTOS/ SINISTROS CONHECIDOS OU AVISADOS DE ASSISTENCIA A SAUDE MEDICO HOSPITALAR%')
+	and dc.DATA >= (select max(data) from demonstracoes_contabeis) - INTERVAL '3 months'
+	ORDER by dc.vl_saldo_final desc
+	limit 10;
+2025-03-31 15:46:51.106 -03 [25460] ERRO:  função unaccent(text) não existe no caractere 201
+2025-03-31 15:46:51.106 -03 [25460] DICA:  Nenhuma função corresponde com o nome e os tipos de argumentos informados. Você precisa adicionar conversões de tipo explícitas.
+2025-03-31 15:46:51.106 -03 [25460] COMANDO:  SELECT oa.razao_social as operadoras,dc.data, dc.descricao, dc.vl_saldo_final AS despesas
+	FROM demonstracoes_contabeis dc
+	INNER JOIN operadoras_ativas oa 
+	ON TRIM(dc.REG_ANS) = TRIM(oa.REG_ANS)
+	WHERE unaccent(dc.descricao) ILIKE unaccent('%EVENTOS/ SINISTROS CONHECIDOS OU AVISADOS DE ASSISTENCIA A SAUDE MEDICO HOSPITALAR%')
+	and dc.DATA >= (select max(data) from demonstracoes_contabeis) - INTERVAL '3 months'
+	ORDER by dc.vl_saldo_final desc
+	limit 10;
+2025-03-31 15:49:26.996 -03 [10800] LOG:  pedido de desligamento rápido foi recebido
+2025-03-31 15:49:26.999 -03 [31380] ERRO:  cancelando o comando devido a um pedido do usuário
+2025-03-31 15:49:27.001 -03 [10800] LOG:  interrompendo quaisquer transações ativas
+2025-03-31 15:49:27.001 -03 [20296] FATAL:  terminando a conexão devido a um comando do administrador
+2025-03-31 15:49:27.002 -03 [10800] LOG:  processo trabalhador em segundo plano "logical replication launcher" (PID 31380) terminou com código de retorno 1
+2025-03-31 15:49:27.002 -03 [17972] FATAL:  terminando a conexão devido a um comando do administrador
+2025-03-31 15:49:27.003 -03 [4804] FATAL:  terminando a conexão devido a um comando do administrador
+2025-03-31 15:49:27.007 -03 [8428] LOG:  desligando
+2025-03-31 15:49:27.009 -03 [8428] LOG:  checkpoint starting: shutdown immediate
+2025-03-31 15:49:27.052 -03 [8428] LOG:  checkpoint complete: wrote 32 buffers (0.2%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.004 s, sync=0.030 s, total=0.046 s; sync files=26, longest=0.003 s, average=0.002 s; distance=79 kB, estimate=79 kB; lsn=0/1EF59790, redo lsn=0/1EF59790
+2025-03-31 15:49:27.065 -03 [10800] LOG:  sistema de banco de dados está desligado
+2025-03-31 15:50:17.450 -03 [17108] LOG:  iniciando PostgreSQL 17.4 on x86_64-windows, compiled by msvc-19.42.34436, 64-bit
+2025-03-31 15:50:17.453 -03 [17108] LOG:  escutando no endereço IPv6 "::1", porta 5432
+2025-03-31 15:50:17.453 -03 [17108] LOG:  escutando no endereço IPv4 "127.0.0.1", porta 5432
+2025-03-31 15:50:17.497 -03 [31388] LOG:  sistema de banco de dados foi desligado em 2025-03-31 15:49:27 -03
+2025-03-31 15:50:17.511 -03 [17108] LOG:  sistema de banco de dados está pronto para aceitar conexões
+2025-03-31 15:55:17.497 -03 [17400] LOG:  checkpoint starting: time
+2025-03-31 15:55:17.622 -03 [17400] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.107 s, sync=0.004 s, total=0.132 s; sync files=3, longest=0.003 s, average=0.002 s; distance=0 kB, estimate=0 kB; lsn=0/1EF59898, redo lsn=0/1EF59840
+2025-03-31 16:06:58.370 -03 [15396] ERRO:  parâmetro de configuração "pgclientencoding" desconhecido
+2025-03-31 16:06:58.370 -03 [15396] COMANDO:  set PGCLIENTENCODING=UTF8;
+2025-03-31 16:12:00.564 -03 [17108] LOG:  pedido de desligamento rápido foi recebido
+2025-03-31 16:12:00.566 -03 [17108] LOG:  interrompendo quaisquer transações ativas
+2025-03-31 16:12:00.566 -03 [30772] FATAL:  terminando a conexão devido a um comando do administrador
+2025-03-31 16:12:00.568 -03 [26032] FATAL:  terminando a conexão devido a um comando do administrador
+2025-03-31 16:12:00.568 -03 [6136] FATAL:  terminando a conexão devido a um comando do administrador
+2025-03-31 16:12:00.568 -03 [7432] FATAL:  terminando a conexão devido a um comando do administrador
+2025-03-31 16:12:00.572 -03 [17108] LOG:  processo trabalhador em segundo plano "logical replication launcher" (PID 7964) terminou com código de retorno 1
+2025-03-31 16:12:00.574 -03 [17400] LOG:  desligando
+2025-03-31 16:12:00.577 -03 [17400] LOG:  checkpoint starting: shutdown immediate
+2025-03-31 16:12:00.585 -03 [17400] LOG:  checkpoint complete: wrote 0 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.011 s; sync files=0, longest=0.000 s, average=0.000 s; distance=0 kB, estimate=0 kB; lsn=0/1EF59948, redo lsn=0/1EF59948
+2025-03-31 16:12:00.592 -03 [17108] LOG:  sistema de banco de dados está desligado
+2025-03-31 16:12:07.660 -03 [27396] LOG:  iniciando PostgreSQL 17.4 on x86_64-windows, compiled by msvc-19.42.34436, 64-bit
+2025-03-31 16:12:07.663 -03 [27396] LOG:  escutando no endereço IPv6 "::1", porta 5432
+2025-03-31 16:12:07.663 -03 [27396] LOG:  escutando no endereço IPv4 "127.0.0.1", porta 5432
+2025-03-31 16:12:07.704 -03 [8016] LOG:  sistema de banco de dados foi desligado em 2025-03-31 16:12:00 -03
+2025-03-31 16:12:07.718 -03 [27396] LOG:  sistema de banco de dados está pronto para aceitar conexões
+2025-03-31 16:17:07.704 -03 [29580] LOG:  checkpoint starting: time
+2025-03-31 16:17:07.719 -03 [29580] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.002 s, sync=0.003 s, total=0.017 s; sync files=2, longest=0.002 s, average=0.002 s; distance=0 kB, estimate=0 kB; lsn=0/1EF59A50, redo lsn=0/1EF599F8
+2025-03-31 16:17:41.362 -03 [27396] LOG:  pedido de desligamento rápido foi recebido
+2025-03-31 16:17:41.364 -03 [27396] LOG:  interrompendo quaisquer transações ativas
+2025-03-31 16:17:41.367 -03 [27396] LOG:  processo trabalhador em segundo plano "logical replication launcher" (PID 30600) terminou com código de retorno 1
+2025-03-31 16:17:41.368 -03 [29580] LOG:  desligando
+2025-03-31 16:17:41.370 -03 [29580] LOG:  checkpoint starting: shutdown immediate
+2025-03-31 16:17:41.378 -03 [29580] LOG:  checkpoint complete: wrote 0 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.010 s; sync files=0, longest=0.000 s, average=0.000 s; distance=0 kB, estimate=0 kB; lsn=0/1EF59B00, redo lsn=0/1EF59B00
+2025-03-31 16:17:41.383 -03 [27396] LOG:  sistema de banco de dados está desligado
