@@ -1,7 +1,5 @@
-# Etapa 3 - Teste Técnico IntuitiveCare
-
-## Descrição
-Este projeto faz parte do teste técnico da IntuitiveCare. Ele utiliza PostgreSQL no ambiente Windows para realizar queries para estruturar tabelas necessárias para o arquivo csv e queries análisticas.
+# Descrição
+Este projeto utiliza PostgreSQL no ambiente Windows que realiza queries para estruturar tabelas necessárias para o arquivo csv e queries análisticas.
 
 ## Requisitos
 - Windows
@@ -63,7 +61,6 @@ TEMPLATE template0;
 \c meu_banco
 ```
 
-## Execução das tarefas 3.3 e 3.4
 ### Criar queries para estruturar tabelas necessárias para o arquivo csv, utilizar os comandos a seguir dentro do psql no terminal.
 1. Criando tabelas para armazenar os dados dos arquivos csv **Relatorio_cadop.csv** e as demonstrações contábeis das pastas **2023** e **2024**
 ```cmd
@@ -187,8 +184,8 @@ DELIMITER ';',
 ENCODING 'UTF8'
 );
 ```
-## Execução das queries análisticas
-1. As 10 operadoras com maiores despesas em "EVENTOS/ SINISTROS CONHECIDOS OU AVISADOS DE ASSISTÊNCIA A SAÚDE MEDICO HOSPITALAR" no último trimestre.
+## Execução de queries análisticas
+As 10 operadoras com maiores despesas em "EVENTOS/ SINISTROS CONHECIDOS OU AVISADOS DE ASSISTÊNCIA A SAÚDE MEDICO HOSPITALAR" no último trimestre.
 ```cmd
 SELECT oa.razao_social as operadoras,dc.data, dc.descricao, dc.vl_saldo_final AS despesas
 FROM demonstracoes_contabeis dc
@@ -200,7 +197,8 @@ and dc.DATA >= (select max(data) from demonstracoes_contabeis) - INTERVAL '3 mon
 ORDER by dc.vl_saldo_final desc
 limit 10;
 ```
-2. As 10 operadoras com maiores despesas nessa categoria no último ano.
+
+As 10 operadoras com maiores despesas nessa categoria no último ano.
 ```cmd
 SELECT oa.razao_social as operadoras,dc.descricao , dc.vl_saldo_final AS despesas, dc.data
 FROM demonstracoes_contabeis dc
